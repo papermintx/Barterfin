@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "69540561560",
+    "project_id": "barterfin-v2",
+    "storage_bucket": "barterfin-v2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69540561560:android:9b1c76c8ac0e343c1906ed",
+        "android_client_info": {
+          "package_name": "com.rahayu.barterfin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69540561560-kpgltl4id5b5u4jdnt4hqisodb806da4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahayu.barterfin",
+            "certificate_hash": "5266b8d7d673b80f8012f27b363e7149bfa85266"
+          }
+        },
+        {
+          "client_id": "69540561560-up22m5bdn6jkqladp6ti0dp1mev342o0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMzicDLvJg3tgu480G9pGzz6rkgmkce9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69540561560-up22m5bdn6jkqladp6ti0dp1mev342o0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
