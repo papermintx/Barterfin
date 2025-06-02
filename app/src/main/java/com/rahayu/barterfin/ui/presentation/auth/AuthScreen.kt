@@ -82,7 +82,7 @@ fun AuthScreen(modifier: Modifier = Modifier) {
 
                 // Box login
 //                Box(
-//                    modifier = Modifier
+//                    modifier = Mo difier
 //                        .fillMaxWidth()
 //                        .weight(0.7f)
 //                        .clip(RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp))

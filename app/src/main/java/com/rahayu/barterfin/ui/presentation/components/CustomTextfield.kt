@@ -42,6 +42,7 @@ fun CustomTextfield(
     modifier: Modifier = Modifier,
     label : String? = null,
     text: String,
+    leadingIcon: @Composable (() -> Unit)? = null,
     onTextChange: (String) -> Unit,
     isPassword: Boolean = false,
     validate: (String) -> String,
@@ -61,7 +62,7 @@ fun CustomTextfield(
                 Text(
                     text = it,
                     style = MaterialTheme.typography.bodyMedium.copy(
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.Medium,
                         color = labelTextfield,
                         fontSize = 16.sp,
                         lineHeight = 19.sp,
@@ -79,6 +80,7 @@ fun CustomTextfield(
                     color = Color(0xFFE5E7EB),
                 )
             ) },
+            leadingIcon = leadingIcon,
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = MaterialTheme.colorScheme.primary,
                 unfocusedBorderColor = Color(0xFFE5E7EB),

@@ -48,7 +48,7 @@ fun RegisterContent(
         Text(
             text = stringResource(R.string.welcome),
             style = MaterialTheme.typography.headlineSmall.copy(
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Medium,
                 color = MaterialTheme.colorScheme.onBackground
             )
         )
@@ -115,7 +115,7 @@ fun RegisterContent(
                 text = stringResource(R.string.register),
                 modifier = Modifier.padding(vertical = 4.dp, horizontal = 7.dp),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.Medium,
                     color = Color.White
                 )
             )
@@ -134,7 +134,7 @@ fun RegisterContent(
             Spacer(modifier = Modifier.width(8.dp))
             Text(text = "Or", style = MaterialTheme.typography.bodyMedium.copy(
                 color = Color(0xFFE5E7EB),
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Medium,
                 fontSize = 16.sp,
                 lineHeight = 19.sp
             ))
@@ -171,7 +171,7 @@ fun RegisterContent(
                 Text(
                     text = stringResource(R.string.register_with_google),
                     style = MaterialTheme.typography.bodyMedium.copy(
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                 )
@@ -190,7 +190,7 @@ fun RegisterContent(
                     fontSize = 16.sp,
                     lineHeight = 19.sp,
                     color = Color(0xFF000000),
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Medium
                 )
             )
             Spacer(modifier = Modifier.width(4.dp))
@@ -201,7 +201,7 @@ fun RegisterContent(
                 Text(
                     text = stringResource(R.string.login),
                     style = MaterialTheme.typography.bodyMedium.copy(
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.Medium,
                         fontSize = 16.sp,
                         lineHeight = 19.sp,
                         color = MaterialTheme.colorScheme.primary

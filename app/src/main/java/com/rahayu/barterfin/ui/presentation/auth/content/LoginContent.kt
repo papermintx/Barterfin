@@ -49,7 +49,7 @@ fun LoginContent(
         Text(
             text = stringResource(R.string.welcome_back),
             style = MaterialTheme.typography.headlineSmall.copy(
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Medium,
                 color = MaterialTheme.colorScheme.onBackground
             )
         )
@@ -88,7 +88,7 @@ fun LoginContent(
             Text(
                 text = stringResource(R.string.forgot_password),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.Medium,
                     color = Color(0xFF648DDB)
                 )
             )
@@ -106,7 +106,7 @@ fun LoginContent(
                 text = stringResource(R.string.login),
                 modifier = Modifier.padding(vertical = 4.dp, horizontal = 7.dp),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.Medium,
                     color = Color.White
                 )
             )
@@ -125,7 +125,7 @@ fun LoginContent(
             Spacer(modifier = Modifier.width(8.dp))
             Text(text = "Or", style = MaterialTheme.typography.bodyMedium.copy(
                 color = Color(0xFFE5E7EB),
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Medium,
                 fontSize = 16.sp,
                 lineHeight = 19.sp
             ))
@@ -162,7 +162,7 @@ fun LoginContent(
                 Text(
                     text = stringResource(R.string.login_with_google),
                     style = MaterialTheme.typography.bodyMedium.copy(
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                 )
@@ -181,7 +181,7 @@ fun LoginContent(
                     fontSize = 16.sp,
                     lineHeight = 19.sp,
                     color = Color(0xFF000000),
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Medium
                 )
             )
             Spacer(modifier = Modifier.width(4.dp))
@@ -192,7 +192,7 @@ fun LoginContent(
                 Text(
                     text = stringResource(R.string.register),
                     style = MaterialTheme.typography.bodyMedium.copy(
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.Medium,
                         fontSize = 16.sp,
                         lineHeight = 19.sp,
                         color = MaterialTheme.colorScheme.primary
