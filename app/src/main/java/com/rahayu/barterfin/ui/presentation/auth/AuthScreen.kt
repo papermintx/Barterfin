@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rahayu.barterfin.R
 import com.rahayu.barterfin.ui.presentation.auth.content.LoginContent
+import com.rahayu.barterfin.ui.presentation.auth.content.RegisterContent
 import com.rahayu.barterfin.ui.theme.BarterfinTheme
 import com.rahayu.barterfin.ui.theme.gradientColorEnd
 import com.rahayu.barterfin.ui.theme.gradientColorStart
@@ -78,13 +79,27 @@ fun AuthScreen(modifier: Modifier = Modifier) {
                         color = Color.White
                     )
                 }
+
+                // Box login
+//                Box(
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .weight(0.7f)
+//                        .clip(RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp))
+//                ) {
+//                    LoginContent(
+//                        showPassword = showPassword,
+//                    )
+//                }
+
+                // Box Register
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .weight(0.7f)
+                        .weight(2f)
                         .clip(RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp))
                 ) {
-                    LoginContent(
+                    RegisterContent(
                         showPassword = showPassword,
                     )
                 }

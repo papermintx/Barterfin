@@ -11,16 +11,20 @@
     <string name="confirmation_password">Confirmation Password</string>
     <string name="username">Username</string>
     <string name="enter_email">Enter your email</string>
+    <string name="enter_your_username">Enter your username</string>
     <string name="enter_password">Enter your password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="google_icon">Google Icon</string>
     <string name="login_with_google">Login with Google</string>
+    <string name="register_with_google">Sign up with Google</string>
     <string name="dont_have_account">Don\'t have an account?</string>
-
-    <string name="show_password">
-        Show Password
-    </string>
-    <string name="hide_password">
-        Hide Password
-    </string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="welcome_back">Welcome back</string>\
+    <string name="welcome">Welcome</string>
+    <string name="show_password">Show Password</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="create_your_account">Create your account</string>
 </resources>

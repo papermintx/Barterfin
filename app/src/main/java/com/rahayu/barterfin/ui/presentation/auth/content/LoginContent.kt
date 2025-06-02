@@ -38,7 +38,7 @@ import com.rahayu.barterfin.ui.presentation.components.CustomTextfield
 fun LoginContent(
     modifier: Modifier = Modifier,
     onclickShowPassword: (Boolean) -> Unit = {},
-    showPassword: Boolean ,
+    showPassword: Boolean,
 ) {
     Column(
         modifier = modifier.fillMaxSize()
@@ -47,14 +47,14 @@ fun LoginContent(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Welcome back",
+            text = stringResource(R.string.welcome_back),
             style = MaterialTheme.typography.headlineSmall.copy(
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground
             )
         )
         Text(
-            text = "Login to continue",
+            text = stringResource(R.string.login_to_continue),
             style = MaterialTheme.typography.bodySmall
         )
         Spacer(Modifier.height(47.dp))
@@ -193,6 +193,8 @@ fun LoginContent(
                     text = stringResource(R.string.register),
                     style = MaterialTheme.typography.bodyMedium.copy(
                         fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        lineHeight = 19.sp,
                         color = MaterialTheme.colorScheme.primary
                     )
                 )
