@@ -95,6 +95,7 @@ fun CustomTextfield(
             isError = isError,
             visualTransformation = if (isPassword && !passwordVisible) PasswordVisualTransformation() else VisualTransformation.None,
             modifier = Modifier.fillMaxWidth(),
+            maxLines = 1,
             trailingIcon = {
                 if (isPassword) {
                     IconButton(onClick = {
