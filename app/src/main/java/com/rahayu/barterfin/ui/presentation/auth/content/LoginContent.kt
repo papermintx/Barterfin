@@ -28,10 +28,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rahayu.barterfin.R
+import com.rahayu.barterfin.ui.presentation.components.ButtonCustom
 import com.rahayu.barterfin.ui.presentation.components.CustomTextfield
+import com.rahayu.barterfin.ui.theme.BarterfinTheme
 
 
 @Composable
@@ -39,9 +42,17 @@ fun LoginContent(
     modifier: Modifier = Modifier,
     onclickShowPassword: (Boolean) -> Unit = {},
     showPassword: Boolean,
+    onClickLogin: () -> Unit = {},
+    textEmail: String = "",
+    textPassword: String = "",
+    validateEmail: (String) -> String = { "" },
+    validatePassword: (String) -> String = { "" },
+    onTextChangeEmail: (String) -> Unit = {},
+    onTextChangePassword: (String) -> Unit = {}
 ) {
     Column(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier
+            .fillMaxSize()
             .background(Color.White)
             .padding(top = 48.dp, start = 28.dp, end = 28.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -57,30 +68,36 @@ fun LoginContent(
             text = stringResource(R.string.login_to_continue),
             style = MaterialTheme.typography.bodySmall
         )
+
         Spacer(Modifier.height(47.dp))
+
         CustomTextfield(
             hint = stringResource(R.string.enter_email),
-            text = "",
+            text = textEmail,
             label = stringResource(R.string.email),
-            onTextChange = {},
-            validate = { "" },
+            onTextChange = onTextChangeEmail,
+            validate = validateEmail,
             modifier = Modifier.fillMaxWidth(),
         )
+
         Spacer(Modifier.height(12.dp))
+
         CustomTextfield(
             hint = stringResource(R.string.enter_password),
-            text = "",
+            text = textPassword,
             isPassword = true,
             passwordVisible = showPassword,
             showPassword = {
                 onclickShowPassword(it)
             },
             label = stringResource(R.string.password),
-            onTextChange = {},
-            validate = { "" },
+            onTextChange = onTextChangePassword,
+            validate = validatePassword,
             modifier = Modifier.fillMaxWidth(),
         )
+
         Spacer(Modifier.height(16.dp))
+
         Column(
             modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.End,
@@ -94,13 +111,9 @@ fun LoginContent(
             )
         }
         Spacer(Modifier.height(20.dp))
-        Button(
-            onClick = { },
+        ButtonCustom(
+            onClick = onClickLogin,
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors().copy(
-                containerColor = MaterialTheme.colorScheme.primary,
-            )
         ) {
             Text(
                 text = stringResource(R.string.login),
@@ -138,15 +151,12 @@ fun LoginContent(
         }
         Spacer(Modifier.height(16.dp))
 
-        Button(
-            onClick = { },
+        ButtonCustom(
+            onClick = {},
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(16.dp),
             border = BorderStroke(1.dp, Color(0xFFE5E7EB)),
-            colors = ButtonDefaults.buttonColors().copy(
-                containerColor = Color.White,
-            )
-        ) {
+            color = Color.White
+        ){
             Row (
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -168,6 +178,7 @@ fun LoginContent(
                 )
             }
         }
+
         Spacer(Modifier.height(24.dp))
 
         Row(
@@ -178,8 +189,6 @@ fun LoginContent(
             Text(
                 text = stringResource(R.string.dont_have_account),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 16.sp,
-                    lineHeight = 19.sp,
                     color = Color(0xFF000000),
                     fontWeight = FontWeight.Medium
                 )
@@ -193,12 +202,22 @@ fun LoginContent(
                     text = stringResource(R.string.register),
                     style = MaterialTheme.typography.bodyMedium.copy(
                         fontWeight = FontWeight.Medium,
-                        fontSize = 16.sp,
-                        lineHeight = 19.sp,
                         color = MaterialTheme.colorScheme.primary
                     )
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ShowLoginContent() {
+    BarterfinTheme {
+        LoginContent(
+            modifier = Modifier.fillMaxSize(),
+            onclickShowPassword = {},
+            showPassword = false
+        )
     }
 }

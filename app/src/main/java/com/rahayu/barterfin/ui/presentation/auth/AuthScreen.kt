@@ -81,28 +81,28 @@ fun AuthScreen(modifier: Modifier = Modifier) {
                 }
 
                 // Box login
-//                Box(
-//                    modifier = Mo difier
-//                        .fillMaxWidth()
-//                        .weight(0.7f)
-//                        .clip(RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp))
-//                ) {
-//                    LoginContent(
-//                        showPassword = showPassword,
-//                    )
-//                }
-
-                // Box Register
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .weight(2f)
+                        .weight(0.7f)
                         .clip(RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp))
                 ) {
-                    RegisterContent(
+                    LoginContent(
                         showPassword = showPassword,
                     )
                 }
+
+                // Box Register
+//                Box(
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .weight(2f)
+//                        .clip(RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp))
+//                ) {
+//                    RegisterContent(
+//                        showPassword = showPassword,
+//                    )
+//                }
 
             }
         }

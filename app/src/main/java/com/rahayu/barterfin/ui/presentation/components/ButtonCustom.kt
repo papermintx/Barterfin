@@ -18,6 +18,7 @@ fun ButtonCustom(
     onClick: () -> Unit = { },
     border: BorderStroke? = null,
     color: Color = MaterialTheme.colorScheme.primary,
+    contentPadding : PaddingValues = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
     content: @Composable () -> Unit = { },
 ) {
     Button(
@@ -25,7 +26,7 @@ fun ButtonCustom(
         onClick = { onClick() },
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
+        contentPadding = contentPadding,
         colors = ButtonDefaults.buttonColors().copy(
             containerColor = color
         )

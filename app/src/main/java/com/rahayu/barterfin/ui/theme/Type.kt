@@ -52,41 +52,47 @@ val AppTypography = Typography(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 20.sp,
-        letterSpacing = 0.sp
+        letterSpacing = 0.sp,
+        color = textPrimary
     ),
 
     titleMedium = TextStyle(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
-        letterSpacing = 0.15.sp
+        letterSpacing = 0.15.sp,
+        color = textPrimary
     ),
 
     bodyLarge = TextStyle(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.5.sp,
+        color = textPrimary
     ),
 
     bodyMedium = TextStyle(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 13.sp,
-        letterSpacing = 0.25.sp
+        letterSpacing = 0.25.sp,
+        color = textPrimary
     ),
 
     labelSmall = TextStyle(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 10.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.5.sp,
+        color = textPrimary
     ),
 
     labelMedium = TextStyle(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 10.sp,
-        letterSpacing = 1.5.sp
+        letterSpacing = 1.5.sp,
+        color = textPrimary
     )
 )

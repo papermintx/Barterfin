@@ -2,12 +2,21 @@
     <string name="app_name">Barterfin</string>
 
     <string name="web_client_id">69540561560-up22m5bdn6jkqladp6ti0dp1mev342o0.apps.googleusercontent.com</string>
-
+    <string name="image_product">Image Product</string>
     <string name="email">Email</string>
     <string name="name">Name</string>
+    <string name="placeholder_image_internet">https://placehold.co/400</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="barter">Barter</string>
+    <string name="data">Data</string>
+    <string name="favorite_icon">Favorite Icon</string>
+    <string name="category_icon">Category Icon</string>
+    <string name="placeholder_title_product">PANARYBODY QN251 Men Shoes Men Sneakers</string>
     <string name="register">Register</string>
+    <string name="placeholder_name_category">Shoe</string>
+    <string name="placeholder_location_category">Pineapple street no.12,jakarta</string>
+    <string name="placeholder_price">Rp 160.000</string>
     <string name="continue_button">Continue</string>
     <string name="confirmation_password">Confirmation Password</string>
     <string name="username">Username</string>

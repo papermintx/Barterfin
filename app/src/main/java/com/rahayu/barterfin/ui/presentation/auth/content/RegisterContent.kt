@@ -28,19 +28,37 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rahayu.barterfin.R
+import com.rahayu.barterfin.ui.presentation.components.ButtonCustom
 import com.rahayu.barterfin.ui.presentation.components.CustomTextfield
+import com.rahayu.barterfin.ui.theme.BarterfinTheme
 
 @Composable
 fun RegisterContent(
     modifier: Modifier = Modifier,
+    textUsername: String = "",
+    textEmail: String = "",
+    textPassword: String = "",
+    textConfirmPassword: String = "",
+    onTextChangeUsername: (String) -> Unit = {},
+    onTextChangeEmail: (String) -> Unit = {},
+    onTextChangePassword: (String) -> Unit = {},
+    onTextChangeConfirmPassword: (String) -> Unit = {},
+    validateUsername: (String) -> String = { "" },
+    validateEmail: (String) -> String = { "" },
+    validatePassword: (String) -> String = { "" },
+    validateConfirmPassword: (String) -> String = { "" },
+    onClickRegister: () -> Unit = {},
+    onClickRegisterGoogle: () -> Unit = {},
     onclickShowPassword: (Boolean) -> Unit = {},
     showPassword: Boolean,
 ) {
     Column(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier
+            .fillMaxSize()
             .background(Color.White)
             .padding(top = 48.dp, start = 28.dp, end = 28.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -57,70 +75,73 @@ fun RegisterContent(
             style = MaterialTheme.typography.bodySmall
         )
         Spacer(Modifier.height(47.dp))
+
         CustomTextfield(
             hint = stringResource(R.string.enter_your_username),
-            text = "",
+            text = textUsername,
             label = stringResource(R.string.username),
-            onTextChange = {},
-            validate = { "" },
+            onTextChange = onTextChangeUsername,
+            validate = validateUsername,
             modifier = Modifier.fillMaxWidth(),
         )
+
         Spacer(Modifier.height(12.dp))
+
         CustomTextfield(
             hint = stringResource(R.string.enter_email),
-            text = "",
+            text = textEmail,
             label = stringResource(R.string.email),
-            onTextChange = {},
-            validate = { "" },
+            onTextChange = onTextChangeEmail,
+            validate = validateEmail,
             modifier = Modifier.fillMaxWidth(),
         )
+
         Spacer(Modifier.height(12.dp))
+
         CustomTextfield(
             hint = stringResource(R.string.enter_password),
-            text = "",
+            text = textPassword,
             isPassword = true,
             passwordVisible = showPassword,
             showPassword = {
                 onclickShowPassword(it)
             },
             label = stringResource(R.string.password),
-            onTextChange = {},
-            validate = { "" },
+            onTextChange = onTextChangePassword,
+            validate = validatePassword,
             modifier = Modifier.fillMaxWidth(),
         )
         Spacer(Modifier.height(12.dp))
         CustomTextfield(
             hint = stringResource(R.string.confirm_your_password),
-            text = "",
+            text = textConfirmPassword,
             isPassword = true,
             passwordVisible = showPassword,
             showPassword = {
                 onclickShowPassword(it)
             },
             label = stringResource(R.string.confirm_password),
-            onTextChange = {},
-            validate = { "" },
+            onTextChange = onTextChangeConfirmPassword,
+            validate = validateConfirmPassword,
             modifier = Modifier.fillMaxWidth(),
         )
+
         Spacer(Modifier.height(20.dp))
-        Button(
-            onClick = { },
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors().copy(
-                containerColor = MaterialTheme.colorScheme.primary,
-            )
-        ) {
+
+        ButtonCustom(
+            onClick = onClickRegister,
+        ){
             Text(
                 text = stringResource(R.string.register),
-                modifier = Modifier.padding(vertical = 4.dp, horizontal = 7.dp),
                 style = MaterialTheme.typography.bodyMedium.copy(
                     fontWeight = FontWeight.Medium,
                     color = Color.White
                 )
             )
         }
+
         Spacer(Modifier.height(16.dp))
+
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,
@@ -145,17 +166,15 @@ fun RegisterContent(
                 modifier = Modifier.weight(1f)
             )
         }
+
         Spacer(Modifier.height(16.dp))
 
-        Button(
-            onClick = { },
+        ButtonCustom(
+            onClick = onClickRegisterGoogle,
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(16.dp),
             border = BorderStroke(1.dp, Color(0xFFE5E7EB)),
-            colors = ButtonDefaults.buttonColors().copy(
-                containerColor = Color.White,
-            )
-        ) {
+            color = Color.White
+        ){
             Row (
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -177,6 +196,7 @@ fun RegisterContent(
                 )
             }
         }
+
         Spacer(Modifier.height(24.dp))
 
         Row(
@@ -187,13 +207,10 @@ fun RegisterContent(
             Text(
                 text = stringResource(R.string.already_have_account),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 16.sp,
-                    lineHeight = 19.sp,
                     color = Color(0xFF000000),
                     fontWeight = FontWeight.Medium
                 )
             )
-            Spacer(modifier = Modifier.width(4.dp))
             TextButton(
                 onClick = {},
                 contentPadding = PaddingValues(0.dp),
@@ -202,12 +219,22 @@ fun RegisterContent(
                     text = stringResource(R.string.login),
                     style = MaterialTheme.typography.bodyMedium.copy(
                         fontWeight = FontWeight.Medium,
-                        fontSize = 16.sp,
-                        lineHeight = 19.sp,
                         color = MaterialTheme.colorScheme.primary
                     )
                 )
             }
         }
+    }
+}
+
+@Preview
+@Composable
+private fun ShowRegisterContent() {
+    BarterfinTheme {
+        RegisterContent(
+            modifier = Modifier.fillMaxSize(),
+            onclickShowPassword = {},
+            showPassword = false
+        )
     }
 }
