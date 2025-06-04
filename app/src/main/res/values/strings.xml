@@ -10,6 +10,9 @@
     <string name="login">Login</string>
     <string name="barter">Barter</string>
     <string name="data">Data</string>
+    <string name="search_placeholder">Search…</string>
+    <string name="search_description">Search…</string>
+    <string name="recent_searches">Recent Searches</string>
     <string name="favorite_icon">Favorite Icon</string>
     <string name="category_icon">Category Icon</string>
     <string name="placeholder_title_product">PANARYBODY QN251 Men Shoes Men Sneakers</string>

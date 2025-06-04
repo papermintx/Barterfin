@@ -28,11 +28,13 @@ import com.rahayu.barterfin.R
 
 @Composable
 fun ProfilePictureWithEdit(
+    modifier: Modifier = Modifier,
     profileImageUrl: String? = null,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    withEdit: Boolean = true
 ) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .size(100.dp)
             .clickable { onClick() }
     ) {
@@ -61,22 +63,24 @@ fun ProfilePictureWithEdit(
             )
         }
 
-        IconButton(
-            onClick = onClick,
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .offset(x = 5.dp, y = 5.dp)
-                .size(36.dp)
-                .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.primary)
-                .border(2.dp, Color.White, CircleShape)
-        ) {
-            Icon(
-                imageVector = Icons.Default.CameraAlt,
-                contentDescription = stringResource(R.string.edit_profile_picture),
-                modifier = Modifier.size(20.dp),
-                tint = Color.White
-            )
+        if (withEdit){
+            IconButton(
+                onClick = onClick,
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .offset(x = 5.dp, y = 5.dp)
+                    .size(36.dp)
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.primary)
+                    .border(2.dp, Color.White, CircleShape)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.CameraAlt,
+                    contentDescription = stringResource(R.string.edit_profile_picture),
+                    modifier = Modifier.size(20.dp),
+                    tint = Color.White
+                )
+            }
         }
     }
 }
